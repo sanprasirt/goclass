@@ -4,13 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/sanprasirt/goclass/hello"
+	"github.com/sanprasirt/goclass"
 )
 
 func main() {
-	if len(os.Args) <= 1 {
-		fmt.Println(hello.Say("World"))
-	} else {
-		fmt.Println(hello.Say(os.Args[1]))
-	}
+	fmt.Println(goclass.Say(os.Args[1:]))
 }

@@ -1,5 +1,10 @@
-package hello
+package goclass
 
-func Say(name string) string {
-	return "Hello, " + name
+import "strings"
+
+func Say(names []string) string {
+	if len(names) == 0 {
+		names = []string{"World"}
+	}
+	return "Hello, " + strings.Join(names, " ") + "!"
 }
